@@ -1,0 +1,14 @@
+Write INSERT statements to insert 20 todos into the todos table, with a combination of priorities, created times, and completed times, with not all having a completed time.
+///Write a SELECT statement to find all incomplete todos with priority 3.
+SELECT id,title,priority,completed_at FROM todos WHERE priority = 3 and completed_at is null;
+
+
+///Write a SELECT statement to find the number of incomplete todos by priority.
+SELECT * FROM todos WHERE completed_at is null order by priority;
+
+////Write a SELECT statement to find the number of todos by priority created in the last 30 days.
+SELECT * FROM todos order by priority, create_at;
+
+SELECT * From todos WHERE create_at between '2017-08-06' and '2017-09-06' and completed_at  is null order by priority;
+
+////Write a SELECT statement to find the next todo you should work on. This is the todo with the highest priority that was created first.
